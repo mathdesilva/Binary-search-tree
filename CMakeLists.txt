@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-BSTree (game_of_life VERSION 1.0.0 LANGUAGES CXX )
+project (BSTree VERSION 1.0.0 LANGUAGES CXX )
 
 #=== FINDING PACKAGES ===#
 
