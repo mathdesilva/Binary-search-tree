@@ -1,0 +1,7 @@
+build/*
+include/*.swp
+src/*.swp
+*swp
+html/*
+latex/*
+docs/*
