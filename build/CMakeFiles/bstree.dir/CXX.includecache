@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/BinSearchTree.h
+iostream
+-
+string
+-
+
+/home/matheus/Documents/bti/EDB2Codes/projetos/Binary-search-tree/src/BinSearchTree.cpp
+BinSearchTree.h
+/home/matheus/Documents/bti/EDB2Codes/projetos/Binary-search-tree/src/BinSearchTree.h
+
+/home/matheus/Documents/bti/EDB2Codes/projetos/Binary-search-tree/src/bstree_drive.cpp
+iostream
+-
+vector
+-
+fstream
+-
+string
+-
+BinSearchTree.h
+/home/matheus/Documents/bti/EDB2Codes/projetos/Binary-search-tree/src/BinSearchTree.h
+

@@ -1,0 +1,1 @@
+/usr/bin/c++   -Wall    CMakeFiles/bstree.dir/src/BinSearchTree.cpp.o CMakeFiles/bstree.dir/src/bstree_drive.cpp.o  -o bstree 
