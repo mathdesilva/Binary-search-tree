@@ -14,10 +14,25 @@ BinSearchTree::~BinSearchTree( ) {
 }
 
 /// Search an element
-bool BinSearchTree::search( int element ) {
+bool BinSearchTree::search( int element ) {  //TO TEST
 	// TODO
+	while(true){
+	
+		if(root == nullptr){
+			break;
+		}
+		else if(this->root == element){
+			return root;
+		}
+		else if(this->root < element){
+			root = root->right;
+		}
+		else{
+			root = root->left;
+		}
+	}
+	std::cout<< "Element not found."<< std::endl;
 	// std::cout << "test :: seach method - " << element << std::endl;
-	return true;
 }
 
 /// Insert an element
