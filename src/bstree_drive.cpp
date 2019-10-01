@@ -50,12 +50,55 @@ int main(int argc, char *argv[]) {
 
 	// Executing commands
 	std::cout << "Starting commands\n";
-	std::string cmd_tmp;
-	while( com_file >> cmd_tmp ) {
-		// TODO: do some ifs, one for each command.
-	}
 
 	BinSearchTree bst;
+	
+	std::string cmd_tmp;
+	int n_tmp;
+	while( com_file >> cmd_tmp ) {
+		if( cmd_tmp == "ENESIMO" ) {
+			com_file >> n_tmp;
+			std::cout << " >> nth_element | n = " << n_tmp << std::endl;
+			std::cout << "    > Return: " << bst.nth_element( n_tmp ) << std::endl;
+		}
+		else if( cmd_tmp == "POSICAO" ) {
+			com_file >> n_tmp;
+			std::cout << " >> position | n = " << n_tmp << std::endl;
+			std::cout << "    > Return: " << bst.position( n_tmp ) << std::endl;
+		}
+		else if( cmd_tmp == "MEDIANA" ) {
+			std::cout << " >> median" << std::endl;
+			std::cout << "    > Return: " << bst.median( ) << std::endl;
+		}
+		else if( cmd_tmp == "CHEIA" ) {
+			std::cout << " >> is_full" << std::endl;
+			std::cout << "    > Return: " << bst.is_full( ) << std::endl;
+		}
+		else if( cmd_tmp == "COMPLETA" ) {
+			std::cout << " >> is_complete" << std::endl;
+			std::cout << "    > Return: " << bst.is_complete( ) << std::endl;
+		}
+		else if( cmd_tmp == "IMPRIMA" ) {
+			std::cout << " >> to_string" << std::endl;
+			std::cout << "    > Return: " << bst.to_string( ) << std::endl;
+		}
+		else if( cmd_tmp == "REMOVA" ) {
+			com_file >> n_tmp;
+			std::cout << " >> remove | n = " << n_tmp << std::endl;
+			std::cout << "    > Return: " << bst.remove( n_tmp ) << std::endl;
+		}
+		else if( cmd_tmp == "INSIRA" ) {
+			com_file >> n_tmp;
+			std::cout << " >> insert | n = " << n_tmp << std::endl;
+			std::cout << "    > Return: " << bst.insert( n_tmp ) << std::endl;
+		}
+		else {
+			std::cout << "Error: invalid command: " << cmd_tmp << std::endl;
+			return EXIT_FAILURE;
+		}
+	}
+	com_file.close();
+
 
 	return EXIT_SUCCESS;
 }

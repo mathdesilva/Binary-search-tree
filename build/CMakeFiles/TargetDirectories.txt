@@ -1,0 +1,3 @@
+/home/matheus/Documents/bti/EDB2Codes/projetos/Binary-search-tree/build/CMakeFiles/rebuild_cache.dir
+/home/matheus/Documents/bti/EDB2Codes/projetos/Binary-search-tree/build/CMakeFiles/bstree.dir
+/home/matheus/Documents/bti/EDB2Codes/projetos/Binary-search-tree/build/CMakeFiles/edit_cache.dir
