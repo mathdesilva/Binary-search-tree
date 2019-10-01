@@ -12,6 +12,7 @@ class BinSearchTree {
 		//! Struct of a Node
         /*! Contains nodes previous/next adresses, and it's data. */
         struct Node {
+			//int pos;// take the position
             int data;
             Node *prev;
             Node *nextleft;

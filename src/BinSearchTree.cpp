@@ -4,6 +4,7 @@
 /// Constructor
 BinSearchTree::BinSearchTree( ) {
 	// std::cout << "test :: BST Constructor\n";
+	
 	// TODO
 }
 
@@ -14,12 +15,12 @@ BinSearchTree::~BinSearchTree( ) {
 }
 
 /// Search an element
-bool BinSearchTree::search( int element ) {  //TO TEST
+*Node BinSearchTree::search( int element ) {  //TO TEST bool ?
 	// TODO
 	while(true){
 	
-		if(root == nullptr){
-			break;
+		if(this->root == nullptr){
+			return nullptr;
 		}
 		else if(this->root == element){
 			return root;
@@ -31,13 +32,50 @@ bool BinSearchTree::search( int element ) {  //TO TEST
 			root = root->left;
 		}
 	}
-	std::cout<< "Element not found."<< std::endl;
+	//std::cout<< "Element not found."<< std::endl;
 	// std::cout << "test :: seach method - " << element << std::endl;
 }
 
 /// Insert an element
 bool BinSearchTree::insert( int element ) {
 	// TODO
+	while(true){
+
+		if(this->root == nullptr){
+
+		}
+		else if(this->root == element){
+			return false;//cound hapen
+		}
+		else if(this->root < element){
+
+			if(this->root->right == nullptr){//incert the new node in bush
+				Node * val = new Node();
+
+				root->right = val;
+				val->prev = root;
+				val->data = element;
+				return true;
+				//return 0;
+			}
+
+			root = root->right;
+		}
+		else{
+
+			if(this->root->left == nullptr){//incert the new node in bush
+				Node * val = new Node();
+
+				root->left = val;
+				val->prev = root;
+				val->data = element;
+				return true;
+				//return 0;
+			}
+
+			root = root->left;
+		}
+	}
 	// std::cout << "test :: insert method - " << element << std::endl;
 	return true;
 }
@@ -59,6 +97,22 @@ int BinSearchTree::nth_element( int n ) {
 /// position
 int BinSearchTree::position( int element ) {
 	// TODO
+	while(true){
+	
+		if(root == nullptr){
+			break;
+		}
+		else if(this->root == element){
+			return root->pos;
+		}
+		else if(this->root < element){
+			root = root->right;
+		}
+		else{
+			root = root->left;
+		}
+	}
+	std::cout<< "Element not found."<< std::endl;
 	// std::cout << "test :: position method - " << element << std::endl;
 	return 10;
 }
