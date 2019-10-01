@@ -2,8 +2,20 @@
 
 
 /// Constructor
-BinSearchTree::BinSearchTree( ) {
+BinSearchTree::BinSearchTree( std::vector <int> v ):
+	SIZE{ v.size() },
+	root{ new Node() }
+{
+	this->root->prev = nullptr;
+	this->root->left = nullptr;
+	this->root->right = nullptr;
+	this->root->data = v[0];
+	
+	for( int i = 1; i < v.size(), i++){
+		insert( v[i] );
+	}
 	// std::cout << "test :: BST Constructor\n";
+
 	
 	// TODO
 }
@@ -97,22 +109,6 @@ int BinSearchTree::nth_element( int n ) {
 /// position
 int BinSearchTree::position( int element ) {
 	// TODO
-	while(true){
-	
-		if(root == nullptr){
-			break;
-		}
-		else if(this->root == element){
-			return root->pos;
-		}
-		else if(this->root < element){
-			root = root->right;
-		}
-		else{
-			root = root->left;
-		}
-	}
-	std::cout<< "Element not found."<< std::endl;
 	// std::cout << "test :: position method - " << element << std::endl;
 	return 10;
 }
