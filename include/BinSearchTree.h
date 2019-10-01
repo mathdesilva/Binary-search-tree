@@ -4,7 +4,24 @@
 #include <iostream>
 #include <string>
 
+
+
 class BinSearchTree {
+
+	private:
+		//! Struct of a Node
+        /*! Contains nodes previous/next adresses, and it's data. */
+        struct Node {
+            int data;
+            Node *prev;
+            Node *nextleft;
+			Node *nextright;
+            Node( const T & d = T(), Node *p = nullptr, Node *nl = nullptr, Node * nr = nullptr):
+                data(d), prev(p), nextleft(nl), nextright(nr){}// test me
+        };
+
+        std::size_t SIZE;           //!< Total size of the list
+        Node *root;                 //!< Head node of the list
 
 	public:
 		/// Constructor
