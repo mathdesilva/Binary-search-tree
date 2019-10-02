@@ -11,11 +11,15 @@ iostream
 -
 string
 -
+vector
+-
 
 /home/pedro/BTI/2019/EDB2/Binary-search-tree/include/BinSearchTree.h
 iostream
 -
 string
+-
+vector
 -
 
 /home/pedro/BTI/2019/EDB2/Binary-search-tree/src/BinSearchTree.cpp
