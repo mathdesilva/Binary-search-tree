@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/bstree.dir/src/BinSearchTree.cpp.o"
-  "CMakeFiles/bstree.dir/src/bstree_drive.cpp.o"
+  "CMakeFiles/bstree.dir/src/alt_main.cpp.o"
   "bstree.pdb"
   "bstree"
 )
