@@ -1,34 +1,107 @@
-#include "BinSearchTree.h"
+#include "../include/BinSearchTree.h"
 
 
 /// Constructor
-BinSearchTree::BinSearchTree( ) {
-	// std::cout << "test :: BST Constructor\n";
+BinSearchTree::BinSearchTree( std::vector <int> v )
+{
+	for( int i = 0; i < v.size(); i++){
+		insert( v[i] );
+	}
+	//std::cout << "test :: BST Constructor1";
+	// TODO
+}
+BinSearchTree::BinSearchTree( )
+{
+	//std::cout << "test :: BST Constructor\n";	
 	// TODO
 }
 
 /// Destructor
 BinSearchTree::~BinSearchTree( ) {
-	// std::cout << "test :: BST Destructor\n";
+	//apply the method remove 
+	//std::cout << "test :: BST Destructor\n";
 	// TODO
 }
 
 /// Search an element
-bool BinSearchTree::search( int element ) {
+bool BinSearchTree::search( int element ) {  //TO TEST bool ?
 	// TODO
-	// std::cout << "test :: seach method - " << element << std::endl;
-	return true;
+	while(true){
+	
+		if(this->root == nullptr){
+			return false;//nullptr
+		}
+		else if(this->root->data == element){
+			return true;//root
+		}
+		else if(this->root->data < element){
+			root = root->right;
+		}
+		else{
+			root = root->left;
+		}
+	}
+	//std::cout<< "Element not found."<< std::endl;
+	//std::cout << "test :: seach method - " << element << std::endl;
 }
 
 /// Insert an element
 bool BinSearchTree::insert( int element ) {
 	// TODO
+	while(true){
+
+		if(this->root == nullptr){
+			Node * val = new Node();
+
+			root = val;
+			this->root->data = element;
+			SIZE = 1;
+			return true;
+		}
+		else if(this->root->data == element){
+			return false;//cound hapen
+		}
+		else if(this->root->data < element){
+
+			if(this->root->right == nullptr){//incert the new node in bush
+				Node * val = new Node();
+
+				root->right = val;
+				val->prev = root;
+				val->data = element;
+				SIZE = SIZE + 1;
+				return true;
+				//return 0;
+			}
+
+			root = root->right;
+		}
+		else{
+
+			if(this->root->left == nullptr){//incert the new node in bush
+				Node * val = new Node();
+
+				root->left = val;
+				val->prev = root;
+				val->data = element;
+				SIZE = SIZE + 1;
+				return true;
+				//return 0;
+			}
+
+			root = root->left;
+		}
+	}
 	// std::cout << "test :: insert method - " << element << std::endl;
 	return true;
 }
 
 /// Remove an element
 bool BinSearchTree::remove( int element ) {
+
+	// if(element < root->data){
+	// 	root->left = remove()
+	// }
 	// TODO
 	// std::cout << "test :: remove method - " << element << std::endl;
 	return true;

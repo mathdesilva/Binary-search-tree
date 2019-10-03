@@ -3,7 +3,9 @@
 #include <fstream>
 #include <string>
 
-#include "BinSearchTree.h"
+//./bstree ../tests/test1.txt ../tests/test2.txt
+
+#include "../include/BinSearchTree.h"
 
 int main(int argc, char *argv[]) {
 	std::vector<int> arr;	// save in-file arr
@@ -51,6 +53,7 @@ int main(int argc, char *argv[]) {
 	// Executing commands
 	std::cout << "Starting commands\n";
 
+	BinSearchTree bst2(arr);
 	BinSearchTree bst;
 	
 	std::string cmd_tmp;

@@ -6,18 +6,26 @@
 
 #IncludeRegexTransform: 
 
-../include/BinSearchTree.h
+/home/pedro/BTI/2019/EDB2/Binary-search-tree/include/BinSearchTree.h
 iostream
 -
 string
 -
 vector
 -
+<<<<<<< HEAD
 
 /home/pedro/BTI/2019/EDB2/Binary-search-tree/src/BinSearchTree.cpp
 BinSearchTree.h
 /home/pedro/BTI/2019/EDB2/Binary-search-tree/src/BinSearchTree.h
 
+=======
+
+/home/pedro/BTI/2019/EDB2/Binary-search-tree/src/BinSearchTree.cpp
+../include/BinSearchTree.h
+/home/pedro/BTI/2019/EDB2/Binary-search-tree/include/BinSearchTree.h
+
+>>>>>>> dev_pedro
 /home/pedro/BTI/2019/EDB2/Binary-search-tree/src/bstree_drive.cpp
 iostream
 -
@@ -27,6 +35,11 @@ fstream
 -
 string
 -
+<<<<<<< HEAD
 BinSearchTree.h
 /home/pedro/BTI/2019/EDB2/Binary-search-tree/src/BinSearchTree.h
+=======
+../include/BinSearchTree.h
+/home/pedro/BTI/2019/EDB2/Binary-search-tree/include/BinSearchTree.h
+>>>>>>> dev_pedro
 
