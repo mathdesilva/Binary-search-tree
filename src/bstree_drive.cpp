@@ -53,6 +53,7 @@ int main(int argc, char *argv[]) {
 	// Executing commands
 	std::cout << "Starting commands\n";
 
+	BinSearchTree bst2(arr);
 	BinSearchTree bst;
 	
 	std::string cmd_tmp;

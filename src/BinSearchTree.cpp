@@ -2,28 +2,16 @@
 
 
 /// Constructor
-BinSearchTree::BinSearchTree( std::vector <int> v ):
-	SIZE{ v.size() },
-	root{ new Node() }
+BinSearchTree::BinSearchTree( std::vector <int> v )
 {
-	//std::cout << "test :: BST Constructor0---------\n\n\n\n\n";
-	this->root->prev = nullptr;
-	this->root->left = nullptr;
-	this->root->right = nullptr;
-	this->root->data = v[0];
-	
-	//std::cout << "test :: BST Constructor0---------\n\n\n\n\n";
-
-	for( int i = 1; i < v.size(); i++){
+	for( int i = 0; i < v.size(); i++){
 		insert( v[i] );
 	}
-	std::cout << "test :: BST Constructor1---------\n\n\n\n\n";
-
-	
+	//std::cout << "test :: BST Constructor1";
 	// TODO
 }
-BinSearchTree::BinSearchTree( ){
-
+BinSearchTree::BinSearchTree( )
+{
 	//std::cout << "test :: BST Constructor\n";	
 	// TODO
 }
@@ -54,7 +42,7 @@ bool BinSearchTree::search( int element ) {  //TO TEST bool ?
 		}
 	}
 	//std::cout<< "Element not found."<< std::endl;
-	// std::cout << "test :: seach method - " << element << std::endl;
+	//std::cout << "test :: seach method - " << element << std::endl;
 }
 
 /// Insert an element
@@ -67,6 +55,7 @@ bool BinSearchTree::insert( int element ) {
 
 			root = val;
 			this->root->data = element;
+			SIZE = 1;
 			return true;
 		}
 		else if(this->root->data == element){
@@ -80,6 +69,7 @@ bool BinSearchTree::insert( int element ) {
 				root->right = val;
 				val->prev = root;
 				val->data = element;
+				SIZE = SIZE + 1;
 				return true;
 				//return 0;
 			}
@@ -94,6 +84,7 @@ bool BinSearchTree::insert( int element ) {
 				root->left = val;
 				val->prev = root;
 				val->data = element;
+				SIZE = SIZE + 1;
 				return true;
 				//return 0;
 			}
@@ -150,49 +141,6 @@ bool BinSearchTree::is_complete( ) {
 	// std::cout << "test :: is_complete method" << std::endl;
 	return true;
 }
-
-// void BinSearchTree::view(root){
-
-// 	// while(true){
-// 	// 	if(root->prev == nullptr){
-// 	// 		std::cout << root->data << std::endl;
-// 	// 		if(root->left =! nullptr){
-// 	// 			root = root->left;
-// 	// 		}
-// 	// 		else if(root->right != nullptr){
-// 	// 			root = root->right;
-// 	// 		}
-// 	// 		else{
-// 	// 			break;
-// 	// 		}
-// 	// 	}
-		
-// 	// 	else{
-
-// 	// 		std::cout << root->data << '  -  ';
-// 	// 		root = root->prev->right;
-// 	// 		std::cout << root->data << '\n';
-// 	// 		root = root->prev->left;
-				
-// 	// 		if(root->left =! nullptr){
-// 	// 			root = root->left;
-// 	// 		}
-// 	// 		else if(root->right != nullptr){
-// 	// 			root = root->right;
-
-// 	// 		}
-// 	// 		//std::cout << root->data << '  -  ';
-// 	// 		//if()
-// 	// 	}
-// 	// 	//std::cout << root->data << std::endl;
-// 	// }
-// 	if(root != nullptr){
-// 		std::cout << (root)->data << std::cout<< " ";
-// 		view(&(root->left));
-// 		view(&(root->right));
-// 	}
-
-// }
 
 /// to_string
 std::string BinSearchTree::to_string( ) {

@@ -22,8 +22,9 @@ class BinSearchTree {
                 prev(p), left(nl), right(nr){}// test me
         };
 
-        std::size_t SIZE;           //!< Total size of the list
-        Node *root;                 //!< Head node of the list
+        std::size_t SIZE = 0;           //!< Total size of the list
+        Node *root = nullptr;                 //!< Head node of the list
+		
 
 	public:
 		/// Constructor
