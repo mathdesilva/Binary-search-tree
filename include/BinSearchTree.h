@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
 
 
 
@@ -15,16 +16,19 @@ class BinSearchTree {
 			//int pos;// take the position
             int data;
             Node *prev;
-            Node *nextleft;
-			Node *nextright;
-            Node( const T & d = T(), Node *p = nullptr, Node *nl = nullptr, Node * nr = nullptr):
-                data(d), prev(p), nextleft(nl), nextright(nr){}// test me
+            Node *left;
+			Node *right;
+            Node( Node *p = nullptr, Node *nl = nullptr, Node * nr = nullptr):
+                prev(p), left(nl), right(nr){}// test me
         };
 
         std::size_t SIZE;           //!< Total size of the list
         Node *root;                 //!< Head node of the list
 
 	public:
+		/// Constructor
+		BinSearchTree( std::vector <int> v );
+
 		/// Constructor
 		BinSearchTree( );
 
@@ -54,6 +58,8 @@ class BinSearchTree {
 
 		/// is_complete
 		bool is_complete( );
+
+		//void view(root);
 
 		/// to_string
 		std::string to_string( );
