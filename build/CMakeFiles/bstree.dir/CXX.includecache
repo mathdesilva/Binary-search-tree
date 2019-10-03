@@ -11,8 +11,14 @@ iostream
 -
 string
 -
+vector
+-
 
-/home/matheus/Documents/bti/EDB2Codes/projetos/Binary-search-tree/src/bstree_drive.cpp
+/home/pedro/BTI/2019/EDB2/Binary-search-tree/src/BinSearchTree.cpp
+BinSearchTree.h
+/home/pedro/BTI/2019/EDB2/Binary-search-tree/src/BinSearchTree.h
+
+/home/pedro/BTI/2019/EDB2/Binary-search-tree/src/bstree_drive.cpp
 iostream
 -
 vector
@@ -22,5 +28,5 @@ fstream
 string
 -
 BinSearchTree.h
-/home/matheus/Documents/bti/EDB2Codes/projetos/Binary-search-tree/src/BinSearchTree.h
+/home/pedro/BTI/2019/EDB2/Binary-search-tree/src/BinSearchTree.h
 
