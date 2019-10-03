@@ -5,7 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/pedro/BTI/2019/EDB2/Binary-search-tree/src/BinSearchTree.cpp" "/home/pedro/BTI/2019/EDB2/Binary-search-tree/build/CMakeFiles/bstree.dir/src/BinSearchTree.cpp.o"
-  "/home/pedro/BTI/2019/EDB2/Binary-search-tree/src/alt_main.cpp" "/home/pedro/BTI/2019/EDB2/Binary-search-tree/build/CMakeFiles/bstree.dir/src/alt_main.cpp.o"
+  "/home/pedro/BTI/2019/EDB2/Binary-search-tree/src/bstree_drive.cpp" "/home/pedro/BTI/2019/EDB2/Binary-search-tree/build/CMakeFiles/bstree.dir/src/bstree_drive.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -4,6 +4,6 @@
 CMakeFiles/bstree.dir/src/BinSearchTree.cpp.o
  /home/pedro/BTI/2019/EDB2/Binary-search-tree/include/BinSearchTree.h
  /home/pedro/BTI/2019/EDB2/Binary-search-tree/src/BinSearchTree.cpp
-CMakeFiles/bstree.dir/src/alt_main.cpp.o
+CMakeFiles/bstree.dir/src/bstree_drive.cpp.o
  /home/pedro/BTI/2019/EDB2/Binary-search-tree/include/BinSearchTree.h
- /home/pedro/BTI/2019/EDB2/Binary-search-tree/src/alt_main.cpp
+ /home/pedro/BTI/2019/EDB2/Binary-search-tree/src/bstree_drive.cpp

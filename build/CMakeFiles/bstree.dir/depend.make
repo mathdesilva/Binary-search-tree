@@ -4,6 +4,6 @@
 CMakeFiles/bstree.dir/src/BinSearchTree.cpp.o: ../include/BinSearchTree.h
 CMakeFiles/bstree.dir/src/BinSearchTree.cpp.o: ../src/BinSearchTree.cpp
 
-CMakeFiles/bstree.dir/src/alt_main.cpp.o: ../include/BinSearchTree.h
-CMakeFiles/bstree.dir/src/alt_main.cpp.o: ../src/alt_main.cpp
+CMakeFiles/bstree.dir/src/bstree_drive.cpp.o: ../include/BinSearchTree.h
+CMakeFiles/bstree.dir/src/bstree_drive.cpp.o: ../src/bstree_drive.cpp
 

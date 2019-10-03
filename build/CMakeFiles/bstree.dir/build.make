@@ -81,40 +81,40 @@ CMakeFiles/bstree.dir/src/BinSearchTree.cpp.o.provides: CMakeFiles/bstree.dir/sr
 CMakeFiles/bstree.dir/src/BinSearchTree.cpp.o.provides.build: CMakeFiles/bstree.dir/src/BinSearchTree.cpp.o
 
 
-CMakeFiles/bstree.dir/src/alt_main.cpp.o: CMakeFiles/bstree.dir/flags.make
-CMakeFiles/bstree.dir/src/alt_main.cpp.o: ../src/alt_main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pedro/BTI/2019/EDB2/Binary-search-tree/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/bstree.dir/src/alt_main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bstree.dir/src/alt_main.cpp.o -c /home/pedro/BTI/2019/EDB2/Binary-search-tree/src/alt_main.cpp
+CMakeFiles/bstree.dir/src/bstree_drive.cpp.o: CMakeFiles/bstree.dir/flags.make
+CMakeFiles/bstree.dir/src/bstree_drive.cpp.o: ../src/bstree_drive.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pedro/BTI/2019/EDB2/Binary-search-tree/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/bstree.dir/src/bstree_drive.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bstree.dir/src/bstree_drive.cpp.o -c /home/pedro/BTI/2019/EDB2/Binary-search-tree/src/bstree_drive.cpp
 
-CMakeFiles/bstree.dir/src/alt_main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bstree.dir/src/alt_main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pedro/BTI/2019/EDB2/Binary-search-tree/src/alt_main.cpp > CMakeFiles/bstree.dir/src/alt_main.cpp.i
+CMakeFiles/bstree.dir/src/bstree_drive.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bstree.dir/src/bstree_drive.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pedro/BTI/2019/EDB2/Binary-search-tree/src/bstree_drive.cpp > CMakeFiles/bstree.dir/src/bstree_drive.cpp.i
 
-CMakeFiles/bstree.dir/src/alt_main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bstree.dir/src/alt_main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pedro/BTI/2019/EDB2/Binary-search-tree/src/alt_main.cpp -o CMakeFiles/bstree.dir/src/alt_main.cpp.s
+CMakeFiles/bstree.dir/src/bstree_drive.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bstree.dir/src/bstree_drive.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pedro/BTI/2019/EDB2/Binary-search-tree/src/bstree_drive.cpp -o CMakeFiles/bstree.dir/src/bstree_drive.cpp.s
 
-CMakeFiles/bstree.dir/src/alt_main.cpp.o.requires:
+CMakeFiles/bstree.dir/src/bstree_drive.cpp.o.requires:
 
-.PHONY : CMakeFiles/bstree.dir/src/alt_main.cpp.o.requires
+.PHONY : CMakeFiles/bstree.dir/src/bstree_drive.cpp.o.requires
 
-CMakeFiles/bstree.dir/src/alt_main.cpp.o.provides: CMakeFiles/bstree.dir/src/alt_main.cpp.o.requires
-	$(MAKE) -f CMakeFiles/bstree.dir/build.make CMakeFiles/bstree.dir/src/alt_main.cpp.o.provides.build
-.PHONY : CMakeFiles/bstree.dir/src/alt_main.cpp.o.provides
+CMakeFiles/bstree.dir/src/bstree_drive.cpp.o.provides: CMakeFiles/bstree.dir/src/bstree_drive.cpp.o.requires
+	$(MAKE) -f CMakeFiles/bstree.dir/build.make CMakeFiles/bstree.dir/src/bstree_drive.cpp.o.provides.build
+.PHONY : CMakeFiles/bstree.dir/src/bstree_drive.cpp.o.provides
 
-CMakeFiles/bstree.dir/src/alt_main.cpp.o.provides.build: CMakeFiles/bstree.dir/src/alt_main.cpp.o
+CMakeFiles/bstree.dir/src/bstree_drive.cpp.o.provides.build: CMakeFiles/bstree.dir/src/bstree_drive.cpp.o
 
 
 # Object files for target bstree
 bstree_OBJECTS = \
 "CMakeFiles/bstree.dir/src/BinSearchTree.cpp.o" \
-"CMakeFiles/bstree.dir/src/alt_main.cpp.o"
+"CMakeFiles/bstree.dir/src/bstree_drive.cpp.o"
 
 # External object files for target bstree
 bstree_EXTERNAL_OBJECTS =
 
 bstree: CMakeFiles/bstree.dir/src/BinSearchTree.cpp.o
-bstree: CMakeFiles/bstree.dir/src/alt_main.cpp.o
+bstree: CMakeFiles/bstree.dir/src/bstree_drive.cpp.o
 bstree: CMakeFiles/bstree.dir/build.make
 bstree: CMakeFiles/bstree.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pedro/BTI/2019/EDB2/Binary-search-tree/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable bstree"
@@ -126,7 +126,7 @@ CMakeFiles/bstree.dir/build: bstree
 .PHONY : CMakeFiles/bstree.dir/build
 
 CMakeFiles/bstree.dir/requires: CMakeFiles/bstree.dir/src/BinSearchTree.cpp.o.requires
-CMakeFiles/bstree.dir/requires: CMakeFiles/bstree.dir/src/alt_main.cpp.o.requires
+CMakeFiles/bstree.dir/requires: CMakeFiles/bstree.dir/src/bstree_drive.cpp.o.requires
 
 .PHONY : CMakeFiles/bstree.dir/requires
 

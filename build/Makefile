@@ -150,32 +150,32 @@ src/BinSearchTree.cpp.s:
 	$(MAKE) -f CMakeFiles/bstree.dir/build.make CMakeFiles/bstree.dir/src/BinSearchTree.cpp.s
 .PHONY : src/BinSearchTree.cpp.s
 
-src/alt_main.o: src/alt_main.cpp.o
+src/bstree_drive.o: src/bstree_drive.cpp.o
 
-.PHONY : src/alt_main.o
+.PHONY : src/bstree_drive.o
 
 # target to build an object file
-src/alt_main.cpp.o:
-	$(MAKE) -f CMakeFiles/bstree.dir/build.make CMakeFiles/bstree.dir/src/alt_main.cpp.o
-.PHONY : src/alt_main.cpp.o
+src/bstree_drive.cpp.o:
+	$(MAKE) -f CMakeFiles/bstree.dir/build.make CMakeFiles/bstree.dir/src/bstree_drive.cpp.o
+.PHONY : src/bstree_drive.cpp.o
 
-src/alt_main.i: src/alt_main.cpp.i
+src/bstree_drive.i: src/bstree_drive.cpp.i
 
-.PHONY : src/alt_main.i
+.PHONY : src/bstree_drive.i
 
 # target to preprocess a source file
-src/alt_main.cpp.i:
-	$(MAKE) -f CMakeFiles/bstree.dir/build.make CMakeFiles/bstree.dir/src/alt_main.cpp.i
-.PHONY : src/alt_main.cpp.i
+src/bstree_drive.cpp.i:
+	$(MAKE) -f CMakeFiles/bstree.dir/build.make CMakeFiles/bstree.dir/src/bstree_drive.cpp.i
+.PHONY : src/bstree_drive.cpp.i
 
-src/alt_main.s: src/alt_main.cpp.s
+src/bstree_drive.s: src/bstree_drive.cpp.s
 
-.PHONY : src/alt_main.s
+.PHONY : src/bstree_drive.s
 
 # target to generate assembly for a file
-src/alt_main.cpp.s:
-	$(MAKE) -f CMakeFiles/bstree.dir/build.make CMakeFiles/bstree.dir/src/alt_main.cpp.s
-.PHONY : src/alt_main.cpp.s
+src/bstree_drive.cpp.s:
+	$(MAKE) -f CMakeFiles/bstree.dir/build.make CMakeFiles/bstree.dir/src/bstree_drive.cpp.s
+.PHONY : src/bstree_drive.cpp.s
 
 # Help Target
 help:
@@ -189,9 +189,9 @@ help:
 	@echo "... src/BinSearchTree.o"
 	@echo "... src/BinSearchTree.i"
 	@echo "... src/BinSearchTree.s"
-	@echo "... src/alt_main.o"
-	@echo "... src/alt_main.i"
-	@echo "... src/alt_main.s"
+	@echo "... src/bstree_drive.o"
+	@echo "... src/bstree_drive.i"
+	@echo "... src/bstree_drive.s"
 .PHONY : help
 
 
