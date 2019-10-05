@@ -4,7 +4,7 @@
 /// Constructor
 BinSearchTree::BinSearchTree( std::vector <int> v )
 {
-	for( int i = 0; i < v.size(); i++){
+	for( int i = 0; i < (int)v.size(); i++){
 		insert( v[i] );
 	}
 	//std::cout << "test :: BST Constructor1";
@@ -24,25 +24,23 @@ BinSearchTree::~BinSearchTree( ) {
 }
 
 /// Search an element
-bool BinSearchTree::search( int element ) {  //TO TEST bool ?
-	// TODO
+Node* BinSearchTree::search( int element ) {
+	Node * target = root;
 	while(true){
 	
-		if(this->root == nullptr){
-			return false;//nullptr
+		if(target == nullptr){
+			return nullptr;	//nullptr
 		}
-		else if(this->root->data == element){
-			return true;//root
+		else if(target->data == element){
+			return target;	//root
 		}
-		else if(this->root->data < element){
-			root = root->right;
+		else if(target->data < element){
+			target = target->right;
 		}
 		else{
-			root = root->left;
+			target = target->left;
 		}
 	}
-	//std::cout<< "Element not found."<< std::endl;
-	//std::cout << "test :: seach method - " << element << std::endl;
 }
 
 /// Insert an element
@@ -144,7 +142,26 @@ bool BinSearchTree::is_complete( ) {
 
 /// to_string
 std::string BinSearchTree::to_string( ) {
-	// TODO
-	// std::cout << "test :: to_string method" << std::endl;
-	return "abcde";
+	std::string str = "";
+	Node * aux = root;
+	str = rec_node_print(aux);
+
+	return str;
+}
+
+/// Recursive node print
+std::string rec_node_print( Node * ptr ) {
+	std::string str = "";
+	if( ptr == nullptr ) {
+		str += "-)";
+	}
+	else {
+		str += std::to_string(ptr->data) + "(";
+		str += rec_node_print(ptr->left);	// left
+		str += "(";
+		str += rec_node_print(ptr->right); 	// right
+		str += ")";
+	}
+
+	return str;
 }

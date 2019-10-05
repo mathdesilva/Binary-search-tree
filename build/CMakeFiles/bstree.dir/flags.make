@@ -6,5 +6,5 @@ CXX_FLAGS =  -Wall    -std=gnu++14
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/pedro/BTI/2019/EDB2/Binary-search-tree/include 
+CXX_INCLUDES = -I/home/matheus/Documents/bti/edb2/projetos/Binary-search-tree/include 
 
