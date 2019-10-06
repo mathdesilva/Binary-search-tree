@@ -17,9 +17,21 @@ BinSearchTree::BinSearchTree( )
 
 /// Destructor
 BinSearchTree::~BinSearchTree( ) {
-	//apply the method remove 
-	//std::cout << "test :: BST Destructor\n";
-	// TODO
+	rec_node_print(root);
+}
+
+/// Recursive node dealloc
+void rec_node_dealloc( Node * ptr ) {
+	if(ptr == nullptr)
+		return;
+
+	if(ptr->left != nullptr)
+		rec_node_dealloc(ptr->left);
+	
+	if(ptr->right != nullptr)
+		rec_node_dealloc(ptr->right);
+	
+	delete ptr;
 }
 
 /// Search an element
