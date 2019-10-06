@@ -136,9 +136,18 @@ bool BinSearchTree::is_full( ) {
 
 /// is_complete
 bool BinSearchTree::is_complete( ) {
-	// TODO
-	// std::cout << "test :: is_complete method" << std::endl;
-	return true;
+
+	return BinSearchTree::is_complete_util(this->root, 0, SIZE );
+}
+bool BinSearchTree::is_complete_util(Node* ptr, int index, int size ){
+
+	if(ptr == nullptr){
+		return (true);
+	}
+	if (index >= size){
+		return (false);
+	}
+	return (is_complete_util(ptr->left, 2*index + 1, size) && is_complete_util(ptr->right, 2*index + 2, size));
 }
 
 /// to_string

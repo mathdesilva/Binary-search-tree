@@ -9,6 +9,7 @@
 
 int main(int argc, char *argv[]) {
 	std::vector<int> arr;	// save in-file arr
+	std::vector<int> arr2 {40,15,50};
 
 	// Error: missing operand
 	if ( !(argc == 3) ) {
@@ -52,8 +53,9 @@ int main(int argc, char *argv[]) {
 
 	// Executing commands
 	std::cout << "Starting commands\n";
-
+	//int arr2 = [40, 50, 15];
 	BinSearchTree bst(arr);
+	BinSearchTree bst2(arr2);
 	
 	std::string cmd_tmp;
 	int n_tmp;
@@ -79,6 +81,7 @@ int main(int argc, char *argv[]) {
 		else if( cmd_tmp == "COMPLETA" ) {
 			std::cout << " >> is_complete" << std::endl;
 			std::cout << "    > Return: " << bst.is_complete( ) << std::endl;
+			std::cout << "    > Return: " << bst2.is_complete( ) << std::endl;
 		}
 		else if( cmd_tmp == "IMPRIMA" ) {
 			std::cout << " >> to_string" << std::endl;

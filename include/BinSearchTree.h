@@ -54,6 +54,7 @@ class BinSearchTree {
 
 		/// is_complete
 		bool is_complete( );
+		bool is_complete_util(Node* ptr, int index, int size );
 
 		//void view(root);
 
