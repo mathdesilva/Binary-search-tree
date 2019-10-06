@@ -67,6 +67,9 @@ class BinSearchTree {
 		///	Recursive node print function
 		std::string rec_node_print( Node * ptr );
 
+		/// Recursive node dealloc function
+		void rec_node_dealloc( Node * ptr );
+
 };
 
 #endif
