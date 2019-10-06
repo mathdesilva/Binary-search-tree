@@ -5,23 +5,21 @@
 #include <string>
 #include <vector>
 
-
+//! Struct of a Node
+/*! Contains nodes previous/next adresses, and it's data. */
+struct Node {
+	//int pos;// take the position
+	int data;
+	Node *prev;
+	Node *left;
+	Node *right;
+	Node( Node *p = nullptr, Node *nl = nullptr, Node * nr = nullptr):
+		prev(p), left(nl), right(nr){}// test me
+};
 
 class BinSearchTree {
 
 	private:
-		//! Struct of a Node
-        /*! Contains nodes previous/next adresses, and it's data. */
-        struct Node {
-			//int pos;// take the position
-            int data;
-            Node *prev;
-            Node *left;
-			Node *right;
-            Node( Node *p = nullptr, Node *nl = nullptr, Node * nr = nullptr):
-                prev(p), left(nl), right(nr){}// test me
-        };
-
         std::size_t SIZE = 0;           //!< Total size of the list
         Node *root = nullptr;                 //!< Head node of the list
 		
@@ -35,9 +33,6 @@ class BinSearchTree {
 
 		/// Destructor
 		~BinSearchTree( );
-
-		/// Search an element
-		bool search( int element );
 
 		/// Insert an element
 		bool insert( int element );
@@ -64,6 +59,13 @@ class BinSearchTree {
 
 		/// to_string
 		std::string to_string( );
+	
+	private:
+		/// Search an element
+		Node* search( int element );
+
+		///	Recursive node print function
+		std::string rec_node_print( Node * ptr );
 
 };
 

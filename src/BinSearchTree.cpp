@@ -4,11 +4,10 @@
 /// Constructor
 BinSearchTree::BinSearchTree( std::vector <int> v )
 {
-	for( int i = 0; i < v.size(); i++){
+	for( int i = 0; i < (int)v.size(); i++){
 		insert( v[i] );
 	}
-	//std::cout << "test :: BST Constructor1";
-	// TODO
+	std::cout << root->data << std::endl;
 }
 BinSearchTree::BinSearchTree( )
 {
@@ -24,76 +23,64 @@ BinSearchTree::~BinSearchTree( ) {
 }
 
 /// Search an element
-bool BinSearchTree::search( int element ) {  //TO TEST bool ?
-	// TODO
+Node* BinSearchTree::search( int element ) {
+	Node * target = root;
 	while(true){
 	
-		if(this->root == nullptr){
-			return false;//nullptr
+		if(target == nullptr){
+			return nullptr;	//nullptr
 		}
-		else if(this->root->data == element){
-			return true;//root
+		else if(target->data == element){
+			return target;	//root
 		}
-		else if(this->root->data < element){
-			root = root->right;
+		else if(target->data < element){
+			target = target->right;
 		}
 		else{
-			root = root->left;
+			target = target->left;
 		}
 	}
-	//std::cout<< "Element not found."<< std::endl;
-	//std::cout << "test :: seach method - " << element << std::endl;
 }
 
 /// Insert an element
 bool BinSearchTree::insert( int element ) {
-	// TODO
-	while(true){
+	if( root == nullptr ) {
+		root = new Node();
+		root->data = element;
+		SIZE = 1;
+		return true;
+	}
 
-		if(this->root == nullptr){
-			Node * val = new Node();
-
-			root = val;
-			this->root->data = element;
-			SIZE = 1;
-			return true;
+	Node * ptr = root;
+	while( true ) {
+		if( ptr->data == element ) {
+			return false;
 		}
-		else if(this->root->data == element){
-			return false;//cound hapen
-		}
-		else if(this->root->data < element){
-
-			if(this->root->right == nullptr){//incert the new node in bush
-				Node * val = new Node();
-
-				root->right = val;
-				val->prev = root;
-				val->data = element;
-				SIZE = SIZE + 1;
+		else if( element < ptr->data ) {
+			if( ptr->left == nullptr ) {
+				ptr->left = new Node();
+				ptr->left->prev = ptr;
+				ptr->left->data = element;
+				SIZE++;
 				return true;
-				//return 0;
 			}
-
-			root = root->right;
+			else {
+				ptr = ptr->left;
+			}
 		}
-		else{
-
-			if(this->root->left == nullptr){//incert the new node in bush
-				Node * val = new Node();
-
-				root->left = val;
-				val->prev = root;
-				val->data = element;
-				SIZE = SIZE + 1;
+		else {
+			if( ptr->right == nullptr ) {
+				ptr->right = new Node();
+				ptr->right->prev = ptr;
+				ptr->right->data = element;
+				SIZE++;
 				return true;
-				//return 0;
 			}
-
-			root = root->left;
+			else {
+				ptr = ptr->right;
+			}
 		}
 	}
-	// std::cout << "test :: insert method - " << element << std::endl;
-	return true;
 }
 
 /// Remove an element
@@ -144,7 +131,29 @@ bool BinSearchTree::is_complete( ) {
 
 /// to_string
 std::string BinSearchTree::to_string( ) {
-	// TODO
-	// std::cout << "test :: to_string method" << std::endl;
-	return "abcde";
+	std::string str = "";
+
+	str = rec_node_print(this->root);
+
+	return str;
+}
+
+/// Recursive node print
+std::string BinSearchTree::rec_node_print( Node * ptr ) {
+	std::string str = "";
+	if( ptr != nullptr ) {
+		str += std::to_string(ptr->data);
+		if(ptr->left != nullptr or ptr->right != nullptr) {
+			str += "(";
+			str += rec_node_print(ptr->left);	// left
+			str += ")(";
+			str += rec_node_print(ptr->right); 	// right
+			str += ")";
+		}
+	}
+	else{
+		str += "-";
+	}
+
+	return str;
 }
