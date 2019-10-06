@@ -11,8 +11,6 @@ BinSearchTree::BinSearchTree( std::vector <int> v )
 }
 BinSearchTree::BinSearchTree( )
 {
-	//std::cout << "test :: BST Constructor\n";	
-	// TODO
 }
 
 /// Destructor
