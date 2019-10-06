@@ -70,6 +70,9 @@ class BinSearchTree {
 		/// Recursive node dealloc function
 		void rec_node_dealloc( Node * ptr );
 
+		/// largest element of the smallest elements
+		Node * largest_of_the_smallest ( Node * ptr );
+
 };
 
 #endif
