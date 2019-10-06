@@ -1,3 +1,5 @@
+
+.vscode/*
 build/*
 include/*.swp
 src/*.swp
