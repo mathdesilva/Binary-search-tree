@@ -129,9 +129,19 @@ int BinSearchTree::median( ) {
 
 /// is_full
 bool BinSearchTree::is_full( ) {
-	// TODO
-	// std::cout << "test :: is_full method" << std::endl;
-	return true;
+	
+	return is_full_util(this->root);
+}
+bool BinSearchTree::is_full_util(Node* ptr ) {
+	if( ptr == nullptr ){
+		return (true);
+	}
+	if( ptr->left == nullptr && ptr->right ==  nullptr ){
+		return (true);
+	}//222
+	if((ptr->left) && (ptr->right)){
+		return (is_full_util(ptr->left) && is_full_util(ptr->right));
+	}
 }
 
 /// is_complete

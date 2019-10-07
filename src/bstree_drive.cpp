@@ -77,6 +77,8 @@ int main(int argc, char *argv[]) {
 		else if( cmd_tmp == "CHEIA" ) {
 			std::cout << " >> is_full" << std::endl;
 			std::cout << "    > Return: " << bst.is_full( ) << std::endl;
+			std::cout << "    > Return: " << bst2.is_full( ) << std::endl;
+
 		}
 		else if( cmd_tmp == "COMPLETA" ) {
 			std::cout << " >> is_complete" << std::endl;

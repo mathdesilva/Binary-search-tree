@@ -51,6 +51,7 @@ class BinSearchTree {
 
 		/// is_full
 		bool is_full( );
+		bool is_full_util(Node* ptr );
 
 		/// is_complete
 		bool is_complete( );
