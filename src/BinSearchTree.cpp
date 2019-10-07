@@ -233,9 +233,14 @@ int BinSearchTree::rec_position(Node * ptr, int size, const int n_res, int ** re
 
 /// median
 int BinSearchTree::median( ) {
-	// TODO
-	// std::cout << "test :: median method" << std::endl;
-	return -1;
+    int num = SIZE;
+    
+	if((num % 2) != 0){
+
+        return nth_element((num/2)+1);
+    }
+    else
+        return nth_element(num/2);
 }
 
 /// is_full
