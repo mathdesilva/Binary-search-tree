@@ -11,8 +11,6 @@ BinSearchTree::BinSearchTree( std::vector <int> v )
 }
 BinSearchTree::BinSearchTree( )
 {
-	//std::cout << "test :: BST Constructor\n";	
-	// TODO
 }
 
 /// Destructor
@@ -97,13 +95,69 @@ bool BinSearchTree::insert( int element ) {
 
 /// Remove an element
 bool BinSearchTree::remove( int element ) {
+	Node * ptr = search(element);
+	if(ptr == nullptr)
+		return false;
+	
+    if(ptr->left == nullptr) {
+        if(ptr->data < ptr->prev->data) { // left
+            ptr->prev->left = ptr->right;
+            ptr->left->prev = ptr->prev;
+        }
+        else { // right
+            ptr->prev->right = ptr->right;
+            ptr->right->prev = ptr->prev;
+        }
+        delete ptr;
+    }
+    else if(ptr->left->right == nullptr) {
+        Node * gt = ptr->left;
+        gt->prev = ptr->prev;
+        if(gt->data < ptr->prev->data)
+            ptr->prev->left = gt;
+        else
+            ptr->prev->right = gt;
+        
+        if(ptr->right != nullptr){
+            gt->right = ptr->right;
+            ptr->right->prev = gt;
+        }
 
-	// if(element < root->data){
-	// 	root->left = remove()
-	// }
-	// TODO
-	// std::cout << "test :: remove method - " << element << std::endl;
+        delete ptr;
+    }
+    else {
+        Node * gt = largest_of_the_smallest(ptr);
+        // removing gt and making connections
+        gt->prev->right = gt->left;
+        if(gt->left != nullptr)
+            gt->left->prev = gt->prev;
+        // inserting gt in ptr position
+        gt->prev = ptr->prev;
+        gt->left = ptr->left;
+        gt->right = ptr->right;
+        // connecting prev, left and right
+        if(ptr->left != nullptr)
+            ptr->left->prev = gt;
+        if(ptr->right != nullptr)
+            ptr->right->prev = gt;
+        if(gt->data < ptr->prev->data)
+            ptr->prev->left = gt;
+        else
+            ptr->prev->right = gt;
+        // removing ptr
+        delete ptr;
+    }
 	return true;
+}
+
+/// Largest of the smallest
+Node * BinSearchTree::largest_of_the_smallest ( Node * ptr ) {
+    ptr = ptr->left;
+    if(ptr != nullptr)
+        while( ptr->right != nullptr )
+            ptr = ptr->right;
+
+    return ptr;
 }
 
 /// nth_element
