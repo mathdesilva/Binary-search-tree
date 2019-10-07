@@ -78,6 +78,9 @@ class BinSearchTree {
 		/// Recursive nth_element function
 		int rec_nth_element(Node * ptr, int size, const int n_res, Node ** result);
 
+		/// Recursive position function
+		int rec_position(Node * ptr, int size, const int n_res, int ** result);
+
 };
 
 #endif

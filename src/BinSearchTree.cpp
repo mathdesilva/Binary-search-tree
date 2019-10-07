@@ -178,7 +178,7 @@ int BinSearchTree::nth_element( int n ) {
 
 /// Recursive nth_element function
 int BinSearchTree::rec_nth_element(Node * ptr, int size, const int n_res, Node **result) {
-	if(size == -1)
+	if(size == -10000)
 		return size;
 	// left
 	if(ptr->left != nullptr)
@@ -188,7 +188,7 @@ int BinSearchTree::rec_nth_element(Node * ptr, int size, const int n_res, Node *
 	// checking target value
 	if( size == n_res ){
 		*result = ptr;
-		return -1;
+		return -10000;
 	}
 	// right
 	if(ptr->right != nullptr)
@@ -199,9 +199,36 @@ int BinSearchTree::rec_nth_element(Node * ptr, int size, const int n_res, Node *
 
 /// position
 int BinSearchTree::position( int element ) {
-	// TODO
-	// std::cout << "test :: position method - " << element << std::endl;
-	return -1;
+	int * result = nullptr;
+
+	rec_position(root, 0, element, &result);
+
+	if(result != nullptr)
+		return *result;
+	else
+		return -1;
+}
+
+/// Recursive position function
+int BinSearchTree::rec_position(Node * ptr, int size, const int n_res, int ** result) {
+	if(size == -1)
+		return size;
+	// left
+	if(ptr->left != nullptr)
+		size = rec_position(ptr->left, size, n_res, result);
+	
+	size++; // value of this node
+	// checking target value
+	if( ptr->data == n_res ){
+		int a = size;
+		*result = &a;
+		return -1;
+	}
+	// right
+	if(ptr->right != nullptr)
+		size = rec_position(ptr->right, size, n_res, result);
+
+	return size;
 }
 
 /// median
