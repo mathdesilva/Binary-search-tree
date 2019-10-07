@@ -109,6 +109,7 @@ bool BinSearchTree::remove( int element ) {
             ptr->right->prev = ptr->prev;
         }
         delete ptr;
+		SIZE--;
     }
     else if(ptr->left->right == nullptr) {
         Node * gt = ptr->left;
@@ -124,6 +125,7 @@ bool BinSearchTree::remove( int element ) {
         }
 
         delete ptr;
+		SIZE--;
     }
     else {
         Node * gt = largest_of_the_smallest(ptr);
@@ -146,6 +148,7 @@ bool BinSearchTree::remove( int element ) {
             ptr->prev->right = gt;
         // removing ptr
         delete ptr;
+		SIZE--;
     }
 	return true;
 }
@@ -162,37 +165,84 @@ Node * BinSearchTree::largest_of_the_smallest ( Node * ptr ) {
 
 /// nth_element
 int BinSearchTree::nth_element( int n ) {
-	// TODO
-	// std::cout << "test :: nth_element method - " << n << std::endl;
-	return 10;
+	Node * result = nullptr;
+	Node * target = root;
+
+	rec_nth_element(target, 0, n, &result);
+
+	if(result != nullptr)
+		return result->data;
+	else
+		return -1;
+}
+
+/// Recursive nth_element function
+int BinSearchTree::rec_nth_element(Node * ptr, int size, const int n_res, Node **result) {
+	if(size == -1)
+		return size;
+	// left
+	if(ptr->left != nullptr)
+		size = rec_nth_element(ptr->left, size, n_res, result);
+	
+	size++; // value of this node
+	// checking target value
+	if( size == n_res ){
+		*result = ptr;
+		return -1;
+	}
+	// right
+	if(ptr->right != nullptr)
+		size = rec_nth_element(ptr->right, size, n_res, result);
+
+	return size;
 }
 
 /// position
 int BinSearchTree::position( int element ) {
 	// TODO
 	// std::cout << "test :: position method - " << element << std::endl;
-	return 10;
+	return -1;
 }
 
 /// median
 int BinSearchTree::median( ) {
 	// TODO
 	// std::cout << "test :: median method" << std::endl;
-	return 10;
+	return -1;
 }
 
 /// is_full
 bool BinSearchTree::is_full( ) {
-	// TODO
-	// std::cout << "test :: is_full method" << std::endl;
+	
+	return is_full_util(this->root);
+}
+bool BinSearchTree::is_full_util(Node* ptr ) {
+	if( ptr == nullptr ){
+		return (true);
+	}
+	if( ptr->left == nullptr && ptr->right ==  nullptr ){
+		return (true);
+	}//222
+	if((ptr->left) && (ptr->right)){
+		return (is_full_util(ptr->left) && is_full_util(ptr->right));
+	}
 	return true;
 }
 
 /// is_complete
 bool BinSearchTree::is_complete( ) {
-	// TODO
-	// std::cout << "test :: is_complete method" << std::endl;
-	return true;
+
+	return BinSearchTree::is_complete_util(this->root, 0, SIZE );
+}
+bool BinSearchTree::is_complete_util(Node* ptr, int index, int size ){
+
+	if(ptr == nullptr){
+		return (true);
+	}
+	if (index >= size){
+		return (false);
+	}
+	return (is_complete_util(ptr->left, 2*index + 1, size) && is_complete_util(ptr->right, 2*index + 2, size));
 }
 
 /// to_string

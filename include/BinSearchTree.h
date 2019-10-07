@@ -51,9 +51,11 @@ class BinSearchTree {
 
 		/// is_full
 		bool is_full( );
+		bool is_full_util(Node* ptr );
 
 		/// is_complete
 		bool is_complete( );
+		bool is_complete_util(Node* ptr, int index, int size );
 
 		//void view(root);
 
@@ -72,6 +74,9 @@ class BinSearchTree {
 
 		/// largest element of the smallest elements
 		Node * largest_of_the_smallest ( Node * ptr );
+
+		/// Recursive nth_element function
+		int rec_nth_element(Node * ptr, int size, const int n_res, Node ** result);
 
 };
 
